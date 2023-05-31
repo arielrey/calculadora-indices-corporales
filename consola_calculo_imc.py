@@ -2,7 +2,7 @@ def calcular_IMC(pesoInp, alturaInp):
     
     #calcular IMC
     imc = pesoInp / (alturaInp*alturaInp)
-    print(f"Su IMC es: ", imc)
+    print("Su IMC es: ", imc)
     
     #clasificar imc
     clasificarIMC(imc)
