@@ -1,33 +1,96 @@
-"""
-Descripción de la función: Calcula el porcentaje de grasa de una persona a partir de la ecuación
-definida anteriormente.
-
-Parámetros y retorno:
-Nombre Tipo Descripción
-peso float Peso de la persona en kilogramos.
-altura float Altura de la persona en metros.
-edad int Edad de la persona en años.
-valor_genero float Valor que varía según el género de la persona: en caso de ser masculino debe
-
-ser 10.8 y en caso de ser femenino debe ser 0.
-Retorno float El porcentaje de grasa que tiene el cuerpo de la persona.
-
-
-"""
-
-
 def calcular_porcentaje_grasa(peso, altura, edad, valor_genero):
     
     m = float(10.8)
     f = float(0)
     imc = peso / (altura*altura)
 
+
+#calcular %GC segun genero y recomendaciones por edades
+    #masculino
     if valor_genero == "m":
+        
         porcentajeGrasa = 1.2 * imc + 0.23 * edad - 5.4 - m
         print ("Su porcentaje de grasa es: ", porcentajeGrasa)
+
+
+        #calcular recomendaciones entre 20 a 29 años
+        if edad >=20 and edad <= 29 and porcentajeGrasa >= 11 and porcentajeGrasa <= 20:
+            print ("Su cuerpo contiene la grasa recomendada (porcentaje entre 11 a 20) segun su edad. ")
+        if edad >=20 and edad <= 29 and porcentajeGrasa < 11:
+            print ("Su porcentaje de grasa corporal esta por lo bajo de lo recomendado. ")
+        if edad >=20 and edad <= 29 and porcentajeGrasa > 20:
+            print ("Su porcentaje de grasa corporal supera a lo recomendado. ")
+
+
+        #calcular recomendaciones entre 30 a 39 años
+        if edad >=30 and edad <= 39 and porcentajeGrasa >= 12 and porcentajeGrasa <= 21:
+            print ("Su cuerpo contiene la grasa recomendada (porcentaje entre 11 a 20) segun su edad. ")
+        if edad >=30 and edad <= 39 and porcentajeGrasa < 12:
+            print ("Su porcentaje de grasa corporal esta por lo bajo de lo recomendado. ")
+        if edad >=30 and edad <= 39 and porcentajeGrasa > 21:
+            print ("Su porcentaje de grasa corporal supera a lo recomendado. ")
+
+
+        #calcular recomendaciones entre 40 a 49 años
+        if edad >=40 and edad <= 49 and porcentajeGrasa >= 18 and porcentajeGrasa <= 30:
+            print ("Su cuerpo contiene la grasa recomendada (porcentaje entre 11 a 20) segun su edad. ")
+        if edad >=40 and edad <= 49 and porcentajeGrasa < 18:
+            print ("Su porcentaje de grasa corporal esta por lo bajo de lo recomendado. ")
+        if edad >=40 and edad <= 49 and porcentajeGrasa > 30:
+            print ("Su porcentaje de grasa corporal supera a lo recomendado. ")
+
+
+        #calcular recomendaciones entre 50 a 59 años
+        if edad >=50 and edad <= 59 and porcentajeGrasa >= 19 and porcentajeGrasa <= 31:
+            print ("Su cuerpo contiene la grasa recomendada (porcentaje entre 11 a 20) segun su edad. ")
+        if edad >=50 and edad <= 59 and porcentajeGrasa < 19:
+            print ("Su porcentaje de grasa corporal esta por lo bajo de lo recomendado. ")
+        if edad >=50 and edad <= 59 and porcentajeGrasa > 31:
+            print ("Su porcentaje de grasa corporal supera a lo recomendado. ")
+
+
+
+    #femenino
     if valor_genero =="f":
+        
         porcentajeGrasa = 1.2 * imc + 0.23 * edad - 5.4 - f
         print ("Su porcentaje de grasa es: ", porcentajeGrasa)
+
+        #calcular recomendaciones entre 20 a 29 años
+        if edad >=20 and edad <= 29 and porcentajeGrasa >= 16 and porcentajeGrasa <= 28:
+            print ("Su cuerpo contiene la grasa recomendada (porcentaje entre 11 a 20) segun su edad. ")
+        if edad >=20 and edad <= 29 and porcentajeGrasa < 16:
+            print ("Su porcentaje de grasa corporal esta por lo bajo de lo recomendado. ")
+        if edad >=20 and edad <= 29 and porcentajeGrasa > 28:
+            print ("Su porcentaje de grasa corporal supera a lo recomendado. ")
+
+
+        #calcular recomendaciones entre 30 a 39 años
+        if edad >=30 and edad <= 39 and porcentajeGrasa >= 17 and porcentajeGrasa <= 29:
+            print ("Su cuerpo contiene la grasa recomendada (porcentaje entre 11 a 20) segun su edad. ")
+        if edad >=30 and edad <= 39 and porcentajeGrasa < 17:
+            print ("Su porcentaje de grasa corporal esta por lo bajo de lo recomendado. ")
+        if edad >=30 and edad <= 39 and porcentajeGrasa > 29:
+            print ("Su porcentaje de grasa corporal supera a lo recomendado. ")
+
+
+        #calcular recomendaciones entre 40 a 49 años
+        if edad >=40 and edad <= 49 and porcentajeGrasa >= 18 and porcentajeGrasa <= 30:
+            print ("Su cuerpo contiene la grasa recomendada (porcentaje entre 11 a 20) segun su edad. ")
+        if edad >=40 and edad <= 49 and porcentajeGrasa < 18:
+            print ("Su porcentaje de grasa corporal esta por lo bajo de lo recomendado. ")
+        if edad >=40 and edad <= 49 and porcentajeGrasa > 30:
+            print ("Su porcentaje de grasa corporal supera a lo recomendado. ")
+
+
+        #calcular recomendaciones entre 50 a 59 años
+        if edad >=50 and edad <= 59 and porcentajeGrasa >= 19 and porcentajeGrasa <= 31:
+            print ("Su cuerpo contiene la grasa recomendada (porcentaje entre 11 a 20) segun su edad. ")
+        if edad >=50 and edad <= 59 and porcentajeGrasa < 19:
+            print ("Su porcentaje de grasa corporal esta por lo bajo de lo recomendado. ")
+        if edad >=50 and edad <= 59 and porcentajeGrasa > 31:
+            print ("Su porcentaje de grasa corporal supera a lo recomendado. ")
+
 
 
 
